@@ -1,6 +1,6 @@
 
     $(document).ready(function(){
-
+       
       $('#exampleModalLong').modal({backdrop: 'static', keyboard: false,show:false})
 
   $("#myInput").on("keyup", function() {
@@ -404,7 +404,14 @@ $('#files78').on('change', function () {
     relatedTarget.val(fileName);
     });
 });
-
+$(document).ready(function(){
+    $("#checkall").click(function(){
+        $('.check_item').not(this).prop('checked', this.checked);
+    });
+    $("#checkall_main").click(function(){
+        $('.check_item_main').not(this).prop('checked', this.checked);
+    });
+});
 $(document).ready(function () {
       var sign = $('#txt').SignaturePad({
           allowToSign: true,
@@ -879,3 +886,5 @@ return this.each(function () {
 })(jQuery);
 
 
+
+   
